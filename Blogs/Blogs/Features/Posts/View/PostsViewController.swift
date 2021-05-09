@@ -13,6 +13,25 @@ class PostsViewController: AppViewController {
     
     let viewModel: PostsViewModel
     
+    
+    lazy var postsTV: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .singleLine
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        tableView.layoutMargins = UIEdgeInsets.zero
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(PostsTableViewCell.self, forCellReuseIdentifier: PostsTableViewCell.identifier)
+        tableView.accessibilityIdentifier = "postsTV"
+        tableView.tableFooterView = UIView()
+        tableView.layer.masksToBounds = true
+        tableView.layer.borderColor = AppColor.lineGray.color.cgColor
+        tableView.layer.borderWidth = 1.0
+        return tableView
+    }()
+    
+    private var dataSource: PostsTableDataSource?
+    
     // MARK: Intitializer
     
     init(viewModel: PostsViewModel) {
@@ -36,6 +55,19 @@ class PostsViewController: AppViewController {
     func setUpView(){
         self.view.backgroundColor = AppColor.appSecondary.color
         self.navigationItem.title = Constants.App.POSTS_MSG
+        self.view.addSubview(postsTV)
+        
+        dataSource = PostsTableDataSource(didSelectItemHandler: didSelectPostMethod())
+        
+        postsTV.dataSource = dataSource
+        postsTV.delegate = dataSource
+        
+        NSLayoutConstraint.activate([
+            postsTV.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor),
+            postsTV.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor),
+            postsTV.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor),
+            postsTV.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor),
+        ])
     }
     
     // MARK: set up view model
@@ -69,13 +101,22 @@ class PostsViewController: AppViewController {
     // MARK: reload Data
     
     func reloadData() {
-        Utils.printLog(viewModel.postObjects.count)
+        dataSource?.setPostObjectsData(viewModel.postObjects)
+        self.postsTV.reloadData()
     }
     
     // MARK: - Call API
     
     private func getBlogPosts()  {
         viewModel.getBlogPosts()
+    }
+    
+    //MARK: - Handle Selection
+    
+    private func didSelectPostMethod() -> PostsTableDataSource.PostSelectionHandler {
+        return { (postObject) in
+            Utils.printLog(postObject.title)
+        }
     }
 
 }

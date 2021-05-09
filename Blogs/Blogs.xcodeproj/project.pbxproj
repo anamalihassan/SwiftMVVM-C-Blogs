@@ -39,6 +39,11 @@
 		6F2E3253264882C800F828AE /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2E3252264882C800F828AE /* Posts.json */; };
 		6F2E3255264882E700F828AE /* PostsAPIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E3254264882E700F828AE /* PostsAPIServiceMock.swift */; };
 		6F2E325A264883F800F828AE /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E3259264883F800F828AE /* PostsViewModelTests.swift */; };
+		6F2E325C2648854A00F828AE /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E325B2648854A00F828AE /* PostsTableViewCell.swift */; };
+		6F2E325E2648857800F828AE /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E325D2648857800F828AE /* AppFonts.swift */; };
+		6F2E32602648869C00F828AE /* PostsTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E325F2648869C00F828AE /* PostsTableDataSource.swift */; };
+		6F2E326326488A1C00F828AE /* PostsTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E326226488A1C00F828AE /* PostsTableViewCellTests.swift */; };
+		6F2E326526488A9200F828AE /* PostsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E326426488A9200F828AE /* PostsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,11 @@
 		6F2E3252264882C800F828AE /* Posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Posts.json; sourceTree = "<group>"; };
 		6F2E3254264882E700F828AE /* PostsAPIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPIServiceMock.swift; sourceTree = "<group>"; };
 		6F2E3259264883F800F828AE /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
+		6F2E325B2648854A00F828AE /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		6F2E325D2648857800F828AE /* AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		6F2E325F2648869C00F828AE /* PostsTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableDataSource.swift; sourceTree = "<group>"; };
+		6F2E326226488A1C00F828AE /* PostsTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCellTests.swift; sourceTree = "<group>"; };
+		6F2E326426488A9200F828AE /* PostsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				6F2E32172648769800F828AE /* PostsViewController.swift */,
+				6F2E325B2648854A00F828AE /* PostsTableViewCell.swift */,
+				6F2E325F2648869C00F828AE /* PostsTableDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +237,7 @@
 		6F2E3220264877E400F828AE /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				6F2E325D2648857800F828AE /* AppFonts.swift */,
 				6F2E324F2648808500F828AE /* Utils.swift */,
 				6F2E324626487FF700F828AE /* Base */,
 				6F2E32252648783700F828AE /* Helper */,
@@ -331,6 +344,7 @@
 		6F2E3257264883D700F828AE /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				6F2E326126488A1100F828AE /* View */,
 				6F2E3258264883DC00F828AE /* ViewModel */,
 			);
 			path = Posts;
@@ -342,6 +356,15 @@
 				6F2E3259264883F800F828AE /* PostsViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6F2E326126488A1100F828AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E326226488A1C00F828AE /* PostsTableViewCellTests.swift */,
+				6F2E326426488A9200F828AE /* PostsViewControllerTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +500,7 @@
 				6F2E321C264876C900F828AE /* AppCoordinator.swift in Sources */,
 				6F2E3222264877EE00F828AE /* AppColor.swift in Sources */,
 				6F2E323A26487B0D00F828AE /* URLParameterEncoding.swift in Sources */,
+				6F2E325E2648857800F828AE /* AppFonts.swift in Sources */,
 				6F2E324026487B0D00F828AE /* EndPointType.swift in Sources */,
 				6F2E32182648769800F828AE /* PostsViewController.swift in Sources */,
 				6F2E32502648808500F828AE /* Utils.swift in Sources */,
@@ -486,11 +510,13 @@
 				6F2E324A26487FF700F828AE /* AppTableViewCell.swift in Sources */,
 				6F2E32242648783300F828AE /* ExUIColor.swift in Sources */,
 				6F2E323F26487B0D00F828AE /* NetworkLogger.swift in Sources */,
+				6F2E32602648869C00F828AE /* PostsTableDataSource.swift in Sources */,
 				6F2E323C26487B0D00F828AE /* HTTPTask.swift in Sources */,
 				6F2E321A264876BF00F828AE /* AppCoordinatorProtocol.swift in Sources */,
 				6F2E323926487B0D00F828AE /* ParameterEncoding.swift in Sources */,
 				6F2E323726487B0D00F828AE /* PostsAPIService.swift in Sources */,
 				6F2E323E26487B0D00F828AE /* Router.swift in Sources */,
+				6F2E325C2648854A00F828AE /* PostsTableViewCell.swift in Sources */,
 				6F2E31E62648761600F828AE /* SceneDelegate.swift in Sources */,
 				6F2E323826487B0D00F828AE /* BlogsEndPoint.swift in Sources */,
 				6F2E323D26487B0D00F828AE /* HTTPMethod.swift in Sources */,
@@ -508,7 +534,9 @@
 			files = (
 				6F2E325A264883F800F828AE /* PostsViewModelTests.swift in Sources */,
 				6F2E3255264882E700F828AE /* PostsAPIServiceMock.swift in Sources */,
+				6F2E326526488A9200F828AE /* PostsViewControllerTests.swift in Sources */,
 				6F2E31FB2648761900F828AE /* BlogsTests.swift in Sources */,
+				6F2E326326488A1C00F828AE /* PostsTableViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
