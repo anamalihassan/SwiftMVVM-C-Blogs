@@ -1,8 +1,8 @@
 //
 //  ExUIColor.swift
-//  SwiftMVVM
+//  Blogs
 //
-//  Created by Ali Hassan on 06/03/2021.
+//  Created by Ali Hassan on 10/05/2021.
 //
 
 import UIKit

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostsViewController: UIViewController {
+class PostsViewController: AppViewController {
     
     // MARK: Properties
     
@@ -28,6 +28,7 @@ class PostsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpView()
+        setUpViewModel()
     }
     
     // MARK: set up view
@@ -36,6 +37,45 @@ class PostsViewController: UIViewController {
         self.view.backgroundColor = AppColor.appSecondary.color
         self.navigationItem.title = Constants.App.POSTS_MSG
     }
-
+    
+    // MARK: set up view model
+    
+    private func setUpViewModel() {
+        
+        viewModel.updateLoadingStatus = {
+            let _ = self.viewModel.isLoading ? self.activityIndicatorStart() : self.activityIndicatorStop()
+        }
+        
+        viewModel.showAlert = {
+            if let error = self.viewModel.error {
+                Utils.printLog(error)
+                let title = Constants.APIMessages.Warning
+                let action = UIAlertAction(title: Constants.APIMessages.OK, style: .default)
+                DispatchQueue.main.async {
+                    Utils.displayAlert(forViewController: self, with: title , message: error, actions: [action])
+                }
+            }
+        }
+        
+        viewModel.didFinishFetch = {
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
+        }
+        
+        self.getBlogPosts()
+    }
+    
+    // MARK: reload Data
+    
+    func reloadData() {
+        Utils.printLog(viewModel.postObjects.count)
+    }
+    
+    // MARK: - Call API
+    
+    private func getBlogPosts()  {
+        viewModel.getBlogPosts()
+    }
 
 }

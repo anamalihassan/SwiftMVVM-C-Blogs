@@ -19,12 +19,12 @@ class AppCoordinator: AppCoordinatorProtocol {
     func start() {
         guard let window = window else { return }
         
-        rootViewController = UINavigationController(rootViewController: getPaymentMethodsViewController())
+        rootViewController = UINavigationController(rootViewController: getPostsViewController())
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }
     
-    func getPaymentMethodsViewController() -> PostsViewController {
+    func getPostsViewController() -> PostsViewController {
         let viewModel = PostsViewModel()
         let viewController = PostsViewController(viewModel: viewModel)
 //        viewController.delegate = self

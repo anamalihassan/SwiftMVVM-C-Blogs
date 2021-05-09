@@ -20,6 +20,22 @@
 		6F2E3222264877EE00F828AE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E3221264877EE00F828AE /* AppColor.swift */; };
 		6F2E32242648783300F828AE /* ExUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E32232648783300F828AE /* ExUIColor.swift */; };
 		6F2E322726487A1100F828AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E322626487A1100F828AE /* Constants.swift */; };
+		6F2E323726487B0D00F828AE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E322A26487B0D00F828AE /* APIService.swift */; };
+		6F2E323826487B0D00F828AE /* BlogsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E322C26487B0D00F828AE /* BlogsEndPoint.swift */; };
+		6F2E323926487B0D00F828AE /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E322E26487B0D00F828AE /* ParameterEncoding.swift */; };
+		6F2E323A26487B0D00F828AE /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E322F26487B0D00F828AE /* URLParameterEncoding.swift */; };
+		6F2E323B26487B0D00F828AE /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E323026487B0D00F828AE /* JSONParameterEncoder.swift */; };
+		6F2E323C26487B0D00F828AE /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E323226487B0D00F828AE /* HTTPTask.swift */; };
+		6F2E323D26487B0D00F828AE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E323326487B0D00F828AE /* HTTPMethod.swift */; };
+		6F2E323E26487B0D00F828AE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E323426487B0D00F828AE /* Router.swift */; };
+		6F2E323F26487B0D00F828AE /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E323526487B0D00F828AE /* NetworkLogger.swift */; };
+		6F2E324026487B0D00F828AE /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E323626487B0D00F828AE /* EndPointType.swift */; };
+		6F2E324526487CE000F828AE /* PostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E324426487CE000F828AE /* PostObject.swift */; };
+		6F2E324926487FF700F828AE /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E324726487FF700F828AE /* AppViewController.swift */; };
+		6F2E324A26487FF700F828AE /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E324826487FF700F828AE /* AppTableViewCell.swift */; };
+		6F2E324D2648801900F828AE /* ExTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E324B2648801900F828AE /* ExTableViewCell.swift */; };
+		6F2E324E2648801900F828AE /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E324C2648801900F828AE /* LoadingSpinner.swift */; };
+		6F2E32502648808500F828AE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E324F2648808500F828AE /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +75,22 @@
 		6F2E3221264877EE00F828AE /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		6F2E32232648783300F828AE /* ExUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIColor.swift; sourceTree = "<group>"; };
 		6F2E322626487A1100F828AE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6F2E322A26487B0D00F828AE /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		6F2E322C26487B0D00F828AE /* BlogsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogsEndPoint.swift; sourceTree = "<group>"; };
+		6F2E322E26487B0D00F828AE /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		6F2E322F26487B0D00F828AE /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		6F2E323026487B0D00F828AE /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		6F2E323226487B0D00F828AE /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		6F2E323326487B0D00F828AE /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		6F2E323426487B0D00F828AE /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		6F2E323526487B0D00F828AE /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		6F2E323626487B0D00F828AE /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		6F2E324426487CE000F828AE /* PostObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostObject.swift; sourceTree = "<group>"; };
+		6F2E324726487FF700F828AE /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		6F2E324826487FF700F828AE /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
+		6F2E324B2648801900F828AE /* ExTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExTableViewCell.swift; sourceTree = "<group>"; };
+		6F2E324C2648801900F828AE /* LoadingSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
+		6F2E324F2648808500F828AE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +141,7 @@
 		6F2E31E22648761600F828AE /* Blogs */ = {
 			isa = PBXGroup;
 			children = (
+				6F2E322826487AFB00F828AE /* Network */,
 				6F2E3220264877E400F828AE /* Commons */,
 				6F2E32142648766700F828AE /* Coordinator */,
 				6F2E32132648765C00F828AE /* Features */,
@@ -159,6 +192,7 @@
 		6F2E32152648767D00F828AE /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				6F2E324126487B1800F828AE /* Model */,
 				6F2E321D2648772B00F828AE /* ViewModel */,
 				6F2E32162648768300F828AE /* View */,
 			);
@@ -184,6 +218,8 @@
 		6F2E3220264877E400F828AE /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				6F2E324F2648808500F828AE /* Utils.swift */,
+				6F2E324626487FF700F828AE /* Base */,
 				6F2E32252648783700F828AE /* Helper */,
 				6F2E3221264877EE00F828AE /* AppColor.swift */,
 				6F2E322626487A1100F828AE /* Constants.swift */,
@@ -194,9 +230,77 @@
 		6F2E32252648783700F828AE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6F2E324B2648801900F828AE /* ExTableViewCell.swift */,
+				6F2E324C2648801900F828AE /* LoadingSpinner.swift */,
 				6F2E32232648783300F828AE /* ExUIColor.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		6F2E322826487AFB00F828AE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E322D26487B0D00F828AE /* Encoding */,
+				6F2E322B26487B0D00F828AE /* EndPoint */,
+				6F2E323126487B0D00F828AE /* HTTP */,
+				6F2E322926487B0D00F828AE /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6F2E322926487B0D00F828AE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E322A26487B0D00F828AE /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6F2E322B26487B0D00F828AE /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E322C26487B0D00F828AE /* BlogsEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		6F2E322D26487B0D00F828AE /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E322E26487B0D00F828AE /* ParameterEncoding.swift */,
+				6F2E322F26487B0D00F828AE /* URLParameterEncoding.swift */,
+				6F2E323026487B0D00F828AE /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		6F2E323126487B0D00F828AE /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E323226487B0D00F828AE /* HTTPTask.swift */,
+				6F2E323326487B0D00F828AE /* HTTPMethod.swift */,
+				6F2E323426487B0D00F828AE /* Router.swift */,
+				6F2E323526487B0D00F828AE /* NetworkLogger.swift */,
+				6F2E323626487B0D00F828AE /* EndPointType.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		6F2E324126487B1800F828AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E324426487CE000F828AE /* PostObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6F2E324626487FF700F828AE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E324726487FF700F828AE /* AppViewController.swift */,
+				6F2E324826487FF700F828AE /* AppTableViewCell.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,12 +434,28 @@
 			files = (
 				6F2E321C264876C900F828AE /* AppCoordinator.swift in Sources */,
 				6F2E3222264877EE00F828AE /* AppColor.swift in Sources */,
+				6F2E323A26487B0D00F828AE /* URLParameterEncoding.swift in Sources */,
+				6F2E324026487B0D00F828AE /* EndPointType.swift in Sources */,
 				6F2E32182648769800F828AE /* PostsViewController.swift in Sources */,
+				6F2E32502648808500F828AE /* Utils.swift in Sources */,
+				6F2E324526487CE000F828AE /* PostObject.swift in Sources */,
+				6F2E324D2648801900F828AE /* ExTableViewCell.swift in Sources */,
 				6F2E31E42648761600F828AE /* AppDelegate.swift in Sources */,
+				6F2E324A26487FF700F828AE /* AppTableViewCell.swift in Sources */,
 				6F2E32242648783300F828AE /* ExUIColor.swift in Sources */,
+				6F2E323F26487B0D00F828AE /* NetworkLogger.swift in Sources */,
+				6F2E323C26487B0D00F828AE /* HTTPTask.swift in Sources */,
 				6F2E321A264876BF00F828AE /* AppCoordinatorProtocol.swift in Sources */,
+				6F2E323926487B0D00F828AE /* ParameterEncoding.swift in Sources */,
+				6F2E323726487B0D00F828AE /* APIService.swift in Sources */,
+				6F2E323E26487B0D00F828AE /* Router.swift in Sources */,
 				6F2E31E62648761600F828AE /* SceneDelegate.swift in Sources */,
+				6F2E323826487B0D00F828AE /* BlogsEndPoint.swift in Sources */,
+				6F2E323D26487B0D00F828AE /* HTTPMethod.swift in Sources */,
 				6F2E321F2648773900F828AE /* PostsViewModel.swift in Sources */,
+				6F2E324E2648801900F828AE /* LoadingSpinner.swift in Sources */,
+				6F2E324926487FF700F828AE /* AppViewController.swift in Sources */,
+				6F2E323B26487B0D00F828AE /* JSONParameterEncoder.swift in Sources */,
 				6F2E322726487A1100F828AE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
