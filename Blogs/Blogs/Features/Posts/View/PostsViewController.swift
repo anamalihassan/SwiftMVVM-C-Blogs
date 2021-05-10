@@ -13,6 +13,7 @@ class PostsViewController: AppViewController {
     
     let viewModel: PostsViewModel
     
+    weak var delegate: ShowPostDetailCoordinatorDelegate?
     
     lazy var postsTV: UITableView = {
         let tableView = UITableView()
@@ -63,10 +64,10 @@ class PostsViewController: AppViewController {
         postsTV.delegate = dataSource
         
         NSLayoutConstraint.activate([
-            postsTV.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor),
-            postsTV.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor),
-            postsTV.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor),
-            postsTV.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor),
+            postsTV.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            postsTV.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            postsTV.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            postsTV.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
     
@@ -94,8 +95,6 @@ class PostsViewController: AppViewController {
                 self.reloadData()
             }
         }
-        
-        self.getBlogPosts()
     }
     
     // MARK: reload Data
@@ -105,17 +104,13 @@ class PostsViewController: AppViewController {
         self.postsTV.reloadData()
     }
     
-    // MARK: - Call API
-    
-    private func getBlogPosts()  {
-        viewModel.getBlogPosts()
-    }
-    
     //MARK: - Handle Selection
     
     private func didSelectPostMethod() -> PostsTableDataSource.PostSelectionHandler {
-        return { (postObject) in
-            Utils.printLog(postObject.title)
+        return { [weak self] (postObject) in
+            if let strongSelf = self {
+                strongSelf.delegate?.showPostDetail(for: postObject, from: strongSelf)
+            }
         }
     }
 

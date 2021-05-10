@@ -1,5 +1,5 @@
 //
-//  PostsViewModel.swift
+//  PostDetailViewModel.swift
 //  Blogs
 //
 //  Created by Ali Hassan on 10/05/2021.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-class PostsViewModel {
+class PostDetailViewModel {
     
     // MARK: - Properties
     
-    var postObjects: [PostObject] = [] {
+    var commentObjects: [CommentObject] = [] {
         didSet {
             self.didFinishFetch?()
         }
@@ -27,30 +27,33 @@ class PostsViewModel {
     
     private let apiService: PostsAPIService
     
+    let postObject: PostObject
+    
     var showAlert: (() -> ())?
     var updateLoadingStatus: (() -> ())?
     var didFinishFetch: (() -> ())?
     
     // MARK: - Constructor
     
-    init(apiService: PostsAPIService = PostsAPIServiceImpl()) {
+    init(postObject: PostObject, apiService: PostsAPIService = PostsAPIServiceImpl()) {
+        self.postObject = postObject
         self.apiService = apiService
-        self.getBlogPosts()
+        getBlogPostComments(postId: self.postObject.id)
     }
     
     // MARK: - Network call
     
-    func getBlogPosts() {
+    func getBlogPostComments(postId: Int) {
         if self.isLoading {
             return
         }
         self.isLoading = true
-        self.apiService.getBlogPosts(completion: { (response, error) in
+        self.apiService.getBlogPostComments(postId: postId, completion: { (response, error) in
             self.isLoading = false
             if let errorMessage = error{
                 self.error = errorMessage
             }else {
-                self.postObjects = response ?? []
+                self.commentObjects = response ?? []
             }
         })
     }

@@ -10,6 +10,13 @@ import Foundation
 @testable import Blogs
 
 class PostsAPIServiceMock: PostsAPIService {
+    
+    func getBlogPostComments(postId: Int, completion: @escaping ([CommentObject]?, String?) -> Void) {
+        isGetBlogPostCommentsCalled = true
+        let comments = StubGenerator().stubBlogPostComments()
+        completion(comments, nil)
+    }
+    
     func getBlogPosts(completion: @escaping BlogPostsCompletionHandler) {
         isGetBlogPostsCalled = true
         let posts = StubGenerator().stubBlogPosts()
@@ -17,6 +24,8 @@ class PostsAPIServiceMock: PostsAPIService {
     }
     
     var isGetBlogPostsCalled = false
+    
+    var isGetBlogPostCommentsCalled = false
     
 }
 
@@ -27,6 +36,15 @@ class StubGenerator {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         let result = try! decoder.decode(Array<PostObject>.self, from: data)
+        return result
+    }
+    
+    func stubBlogPostComments() -> [CommentObject] {
+        let path = Bundle(for: type(of: self)).path(forResource: "Comments", ofType: "json")!
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        let result = try! decoder.decode(Array<CommentObject>.self, from: data)
         return result
     }
 }

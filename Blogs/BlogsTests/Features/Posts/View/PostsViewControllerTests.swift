@@ -42,7 +42,6 @@ class PostsViewControllerTests: XCTestCase {
     private func makeSUT(_ postObjects: [PostObject] = []) -> PostsViewController {
         let apiService = PostsAPIServiceMock()
         let viewModel = PostsViewModel(apiService: apiService)
-        viewModel.getBlogPosts()
         
         let sut = PostsViewController(viewModel: viewModel)
         _ = sut.view

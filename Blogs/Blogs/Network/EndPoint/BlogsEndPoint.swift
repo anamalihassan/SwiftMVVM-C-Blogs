@@ -16,6 +16,7 @@ enum NetworkEnvironment {
 
 public enum BlogsAPI {
     case posts
+    case comments(postId: Int)
 }
 
 extension BlogsAPI: EndPointType {
@@ -37,6 +38,8 @@ extension BlogsAPI: EndPointType {
         switch self {
         case .posts:
             return "posts"
+        case let .comments(postId):
+            return "posts/\(postId)/comments"
         }
     }
     

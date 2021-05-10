@@ -27,7 +27,17 @@ class AppCoordinator: AppCoordinatorProtocol {
     func getPostsViewController() -> PostsViewController {
         let viewModel = PostsViewModel()
         let viewController = PostsViewController(viewModel: viewModel)
-//        viewController.delegate = self
+        viewController.delegate = self
         return viewController
+    }
+}
+
+// MARK: - Show Post Detail
+
+extension AppCoordinator: ShowPostDetailCoordinatorDelegate {
+    
+    func showPostDetail(for postObject: PostObject, from viewController: UIViewController) {
+        let postDetailViewController = PostDetailViewController(viewModel: PostDetailViewModel(postObject: postObject))
+        viewController.show(postDetailViewController, sender: nil)
     }
 }

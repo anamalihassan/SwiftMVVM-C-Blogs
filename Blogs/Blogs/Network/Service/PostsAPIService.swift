@@ -9,8 +9,11 @@ import Foundation
 
 protocol PostsAPIService {
     typealias BlogPostsCompletionHandler = ([PostObject]?, String?) -> Void
+    typealias BlogPostCommentsCompletionHandler = ([CommentObject]?, String?) -> Void
     
     func getBlogPosts(completion: @escaping BlogPostsCompletionHandler)
+    
+    func getBlogPostComments(postId: Int, completion: @escaping PostsAPIService.BlogPostCommentsCompletionHandler)
     
 }
 
@@ -36,6 +39,36 @@ struct PostsAPIServiceImpl:PostsAPIService {
                     }
                     do {
                         let apiResponse = try JSONDecoder().decode(Array<PostObject>.self, from: responseData)
+                        completion(apiResponse,nil)
+                    }catch {
+                        print(error)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+    
+    func getBlogPostComments(postId: Int, completion: @escaping PostsAPIService.BlogPostCommentsCompletionHandler) {
+        
+        router.request(.comments(postId: postId)) { data, response, error in
+            
+            if error != nil {
+                completion(nil, NetworkResponse.networkConnectionError.rawValue)
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        let apiResponse = try JSONDecoder().decode(Array<CommentObject>.self, from: responseData)
                         completion(apiResponse,nil)
                     }catch {
                         print(error)

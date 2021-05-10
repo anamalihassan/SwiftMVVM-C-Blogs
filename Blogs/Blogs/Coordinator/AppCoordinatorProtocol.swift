@@ -10,3 +10,7 @@ import UIKit
 protocol AppCoordinatorProtocol {
     func start()
 }
+
+protocol ShowPostDetailCoordinatorDelegate: AnyObject {
+    func showPostDetail(for postObject: PostObject, from viewController: UIViewController)
+}

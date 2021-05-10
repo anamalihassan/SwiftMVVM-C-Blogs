@@ -1,5 +1,5 @@
 //
-//  PostsTableViewCell.swift
+//  CommentsTableViewCell.swift
 //  Blogs
 //
 //  Created by Ali Hassan on 10/05/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostsTableViewCell: AppTableViewCell {
+class CommentsTableViewCell: AppTableViewCell {
     
     // MARK: - Properties
     
@@ -15,7 +15,7 @@ class PostsTableViewCell: AppTableViewCell {
         let label = UILabel()
         label.font = UIFont(name: AppFonts.bold.customFont, size: AppFonts.Size.header)
         label.textColor = AppColor.textGray.color
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -25,8 +25,8 @@ class PostsTableViewCell: AppTableViewCell {
         let label = UILabel()
         label.font = UIFont(name: AppFonts.regular.customFont, size: AppFonts.Size.header)
         label.textColor = AppColor.textGray.color
-        label.numberOfLines = 3
-        label.lineBreakMode = .byTruncatingTail
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -58,10 +58,10 @@ class PostsTableViewCell: AppTableViewCell {
 
 }
 
-extension PostsTableViewCell {
+extension CommentsTableViewCell {
     
-    func configureCell(data: PostObject) {
-        self.titleLabel.text = data.title
+    func configureCell(data: CommentObject) {
+        self.titleLabel.text = data.name
         self.descriptionLabel.text = data.body
         
     }
