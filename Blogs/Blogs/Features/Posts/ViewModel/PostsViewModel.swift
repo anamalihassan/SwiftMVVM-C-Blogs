@@ -35,7 +35,6 @@ class PostsViewModel {
     
     init(apiService: PostsAPIService = PostsAPIServiceImpl()) {
         self.apiService = apiService
-        self.getBlogPosts()
     }
     
     // MARK: - Network call

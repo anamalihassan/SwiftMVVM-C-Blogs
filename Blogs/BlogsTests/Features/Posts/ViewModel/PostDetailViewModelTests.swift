@@ -30,7 +30,7 @@ class PostDetailViewModelTests: XCTestCase {
     }
     
     func test_fetch_comments() {
-        sut.getBlogPostComments(postId: postObject.id)
+        sut.getBlogPostComments()
     
         // Assert
         XCTAssert(apiService!.isGetBlogPostCommentsCalled)
@@ -44,7 +44,7 @@ class PostDetailViewModelTests: XCTestCase {
             expect.fulfill()
         }
         
-        sut.getBlogPostComments(postId: postObject.id)
+        sut.getBlogPostComments()
         
         // commentObjects count is equal to the number of comments data
         XCTAssertEqual( sut.commentObjects.count, StubGenerator().stubBlogPostComments().count )

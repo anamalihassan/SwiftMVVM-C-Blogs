@@ -38,17 +38,16 @@ class PostDetailViewModel {
     init(postObject: PostObject, apiService: PostsAPIService = PostsAPIServiceImpl()) {
         self.postObject = postObject
         self.apiService = apiService
-        getBlogPostComments(postId: self.postObject.id)
     }
     
     // MARK: - Network call
     
-    func getBlogPostComments(postId: Int) {
+    func getBlogPostComments() {
         if self.isLoading {
             return
         }
         self.isLoading = true
-        self.apiService.getBlogPostComments(postId: postId, completion: { (response, error) in
+        self.apiService.getBlogPostComments(postId: self.postObject.id, completion: { (response, error) in
             self.isLoading = false
             if let errorMessage = error{
                 self.error = errorMessage

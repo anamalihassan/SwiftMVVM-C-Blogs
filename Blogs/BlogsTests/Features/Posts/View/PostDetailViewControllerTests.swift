@@ -13,10 +13,6 @@ class PostDetailViewControllerTests: XCTestCase {
     
     let commentObjects = StubGenerator().stubBlogPostComments()
     
-    func test_viewDidLoad_rendersHeaderTitle() {
-        XCTAssertEqual(makeSUT().navigationItem.title, Constants.App.POSTS_MSG)
-    }
-    
     func test_viewDidLoad_configuresCommentsTV() {
         XCTAssertNotNil(makeSUT().commentsTV)
     }

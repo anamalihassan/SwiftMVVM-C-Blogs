@@ -129,6 +129,13 @@ class PostDetailViewController: AppViewController {
                 self.reloadData()
             }
         }
+        getBlogPostComments()
+    }
+    
+    // MARK: fetch data
+    
+    private func getBlogPostComments() {
+        viewModel.getBlogPostComments()
     }
     
     // MARK: reload Data

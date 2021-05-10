@@ -95,6 +95,14 @@ class PostsViewController: AppViewController {
                 self.reloadData()
             }
         }
+        
+        getBlogPosts()
+    }
+    
+    // MARK: fetch data
+    
+    private func getBlogPosts() {
+        viewModel.getBlogPosts()
     }
     
     // MARK: reload Data
