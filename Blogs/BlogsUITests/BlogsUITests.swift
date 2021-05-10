@@ -22,13 +22,30 @@ class BlogsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testViewControllers() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let postsTV = app.tables["postsTV"]
+        XCTAssertTrue(postsTV.exists)
+        
+        let postsTableViewCell_0 = postsTV.cells.element(matching: .cell, identifier: "postsTableViewCell_0")
+        postsTableViewCell_0.tap()
+        
+        let titleLabel = app.staticTexts["titleLabel"]
+        XCTAssertTrue(titleLabel.exists)
+        
+        let descriptionLabel = app.staticTexts["descriptionLabel"]
+        XCTAssertTrue(descriptionLabel.exists)
+        
+        let commentsTV = app.tables["commentsTV"]
+        XCTAssert(commentsTV.waitForExistence(timeout: 10))
+        
+        let commentsTableViewCell_0 = commentsTV.cells.element(matching: .cell, identifier: "commentsTableViewCell_0")
+        XCTAssert(commentsTableViewCell_0.waitForExistence(timeout: 10))
     }
 
     func testLaunchPerformance() throws {
