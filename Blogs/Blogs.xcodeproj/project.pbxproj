@@ -53,6 +53,7 @@
 		6F2E327326493E8300F828AE /* CommentsTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E327226493E8300F828AE /* CommentsTableViewCellTests.swift */; };
 		6F2E327526493EEC00F828AE /* PostDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E327426493EEC00F828AE /* PostDetailViewModelTests.swift */; };
 		6F2E32772649401E00F828AE /* PostDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E32762649401E00F828AE /* PostDetailViewControllerTests.swift */; };
+		6F2E32792649E5F600F828AE /* CommentsTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E32782649E5F600F828AE /* CommentsTableViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		6F2E327226493E8300F828AE /* CommentsTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCellTests.swift; sourceTree = "<group>"; };
 		6F2E327426493EEC00F828AE /* PostDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModelTests.swift; sourceTree = "<group>"; };
 		6F2E32762649401E00F828AE /* PostDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		6F2E32782649E5F600F828AE /* CommentsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,12 +240,12 @@
 		6F2E32162648768300F828AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6F2E327A2649E71200F828AE /* DataSource */,
 				6F2E32172648769800F828AE /* PostsViewController.swift */,
 				6F2E325B2648854A00F828AE /* PostsTableViewCell.swift */,
-				6F2E325F2648869C00F828AE /* PostsTableDataSource.swift */,
 				6F2E326C2648930E00F828AE /* CommentsTableViewCell.swift */,
-				6F2E326E2648934500F828AE /* CommentsTableDataSource.swift */,
 				6F2E327026491EC900F828AE /* PostDetailViewController.swift */,
+				6F2E32782649E5F600F828AE /* CommentsTableViewHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +396,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6F2E327A2649E71200F828AE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E326E2648934500F828AE /* CommentsTableDataSource.swift */,
+				6F2E325F2648869C00F828AE /* PostsTableDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,6 +538,7 @@
 			files = (
 				6F2E321C264876C900F828AE /* AppCoordinator.swift in Sources */,
 				6F2E3222264877EE00F828AE /* AppColor.swift in Sources */,
+				6F2E32792649E5F600F828AE /* CommentsTableViewHeader.swift in Sources */,
 				6F2E323A26487B0D00F828AE /* URLParameterEncoding.swift in Sources */,
 				6F2E325E2648857800F828AE /* AppFonts.swift in Sources */,
 				6F2E324026487B0D00F828AE /* EndPointType.swift in Sources */,

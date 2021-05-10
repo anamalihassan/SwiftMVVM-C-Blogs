@@ -27,6 +27,16 @@ class CommentsTableDataSource: NSObject {
 
 extension CommentsTableDataSource: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = CommentsTableViewHeader(frame: .zero)
+        headerView.titleLabel.text = Constants.App.COMMENTS_MSG
+        return headerView
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commentObjects.count
     }

@@ -13,7 +13,7 @@ class CommentsTableViewCell: AppTableViewCell {
     
     let titleLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: AppFonts.bold.customFont, size: AppFonts.Size.header)
+        label.font = UIFont(name: AppFonts.bold.customFont, size: AppFonts.Size.title)
         label.textColor = AppColor.textGray.color
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
@@ -23,8 +23,8 @@ class CommentsTableViewCell: AppTableViewCell {
     
     let descriptionLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: AppFonts.regular.customFont, size: AppFonts.Size.header)
-        label.textColor = AppColor.textGray.color
+        label.font = UIFont(name: AppFonts.regular.customFont, size: AppFonts.Size.body)
+        label.textColor = AppColor.textLightGray.color
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false

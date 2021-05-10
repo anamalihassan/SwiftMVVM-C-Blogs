@@ -16,6 +16,7 @@ struct Constants{
     
     enum App{
         static let POSTS_MSG = "Blogs"
+        static let COMMENTS_MSG = "Comments"
     }
 }
 

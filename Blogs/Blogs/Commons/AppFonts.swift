@@ -25,9 +25,9 @@ enum AppFonts {
     
     enum Size {
         static let header: CGFloat = 20.0
-        static let subHeader: CGFloat = 16.0
-        static let title: CGFloat = 14.0
-        static let body: CGFloat = 12.0
-        static let caption: CGFloat = 10.0
+        static let subHeader: CGFloat = 18.0
+        static let title: CGFloat = 16.0
+        static let body: CGFloat = 14.0
+        static let caption: CGFloat = 12.0
     }
 }

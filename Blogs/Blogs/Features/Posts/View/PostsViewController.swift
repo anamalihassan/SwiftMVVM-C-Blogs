@@ -54,7 +54,7 @@ class PostsViewController: AppViewController {
     // MARK: set up view
     
     func setUpView(){
-        self.view.backgroundColor = AppColor.appSecondary.color
+        self.view.backgroundColor = .white
         self.navigationItem.title = Constants.App.POSTS_MSG
         self.view.addSubview(postsTV)
         

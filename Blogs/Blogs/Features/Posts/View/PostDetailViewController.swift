@@ -33,7 +33,7 @@ class PostDetailViewController: AppViewController {
     lazy var titleLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont(name: AppFonts.bold.customFont, size: AppFonts.Size.header)
-        label.textColor = AppColor.textGray.color
+        label.textColor = AppColor.appPrimary.color
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,8 +43,8 @@ class PostDetailViewController: AppViewController {
     
     lazy var descriptionLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: AppFonts.regular.customFont, size: AppFonts.Size.header)
-        label.textColor = AppColor.textGray.color
+        label.font = UIFont(name: AppFonts.regular.customFont, size: AppFonts.Size.subHeader)
+        label.textColor = AppColor.appPrimary.color
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -75,7 +75,7 @@ class PostDetailViewController: AppViewController {
     // MARK: set up view
     
     func setUpView(){
-        self.view.backgroundColor = AppColor.appSecondary.color
+        self.view.backgroundColor = .white
         
         self.view.addSubview(titleLabel)
         self.view.addSubview(descriptionLabel)

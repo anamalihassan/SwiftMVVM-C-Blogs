@@ -14,7 +14,7 @@ class PostsTableViewCell: AppTableViewCell {
     let titleLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont(name: AppFonts.bold.customFont, size: AppFonts.Size.header)
-        label.textColor = AppColor.textGray.color
+        label.textColor = AppColor.appPrimary.color
         label.numberOfLines = 2
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -23,8 +23,8 @@ class PostsTableViewCell: AppTableViewCell {
     
     let descriptionLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: AppFonts.regular.customFont, size: AppFonts.Size.header)
-        label.textColor = AppColor.textGray.color
+        label.font = UIFont(name: AppFonts.regular.customFont, size: AppFonts.Size.subHeader)
+        label.textColor = AppColor.appPrimary.color
         label.numberOfLines = 3
         label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
